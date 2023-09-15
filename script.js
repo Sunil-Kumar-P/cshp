@@ -14,24 +14,20 @@ document.addEventListener("mouseover", e => {
   })
 })
 
-if (localStorage.getItem('visitorData')) {
-  // If it does, parse it from JSON
-  var visitorData = JSON.parse(localStorage.getItem('visitorData'));
-  var count = visitorData.count;
-} else {
-  // If it doesn't, set it to 1
-  var count = 1;
-  var visitorData = { count: count };
-  localStorage.setItem('visitorData', JSON.stringify(visitorData));
-}
+var count;
+  // Function to increment and display the user count
+  if (localStorage.getItem('userCount')) {
+    // If it exists, increment the count
+    count = parseInt(localStorage.getItem('userCount')) +1;
+    localStorage.setItem('userCount', count);
+  } else {
+    // If it doesn't exist, set the count to 1
+    localStorage.setItem('userCount', 1);
+  }
+    // Check if the 'userCount' key exists in local storage
+   
+   document.getElementById("user-count").innerHTML = "Visitor count is "+ count+" times";
 
-// Display the visitor count in the designated element
-document.getElementById('visitorCount').textContent =  'This Site Has Been visited  ' + count + ' times';
+  // // Call the function to increment and display the user count
+  // incrementUserCount();
 
-// Function to increment the count
-function incrementCount() {
-  count++;
-  visitorData.count = count;
-  localStorage.setItem('visitorData', JSON.stringify(visitorData));
-  document.getElementById('visitorCount').textContent = 'This Site Has Been visited  ' + count + ' times';
-}
