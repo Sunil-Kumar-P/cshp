@@ -1,3 +1,4 @@
+remove repeated css
 .cards-container {
   display: flex;
   justify-content: space-between;
@@ -5,7 +6,9 @@
   max-width: 1210px; /* Adjusted max-width */
   margin: 0 auto;
 }
-
+a {
+  text-decoration: none;
+}
 .card {
   width: calc(9.09% - 20px); /* Adjusted card width for 11 cards in a row */
   background: #fff;
@@ -123,44 +126,16 @@ body {
   position: relative;
 }
 .extragap {
-  margin-top: 10.1%;
-}
-.dropdown-menu {
-  position: absolute;
-  left: 0;
-  top: calc(100% + .25rem);
-  background-color: white;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdown.active > .link + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  margin-top: 5%;
 }
 
 .dropdown-links {
   display: flex;
   flex-direction: column;
   gap: .25rem;
+  font-size: large;
 }
 
-/* Style the dropdown menu container */
-.dropdown-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
 /* Style individual menu items as cards */
 .link {
@@ -184,27 +159,6 @@ body {
   justify-content: space-between;
 }
 
-/* Card container styles */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px; /* Set a max width for the container */
-  margin: 0 auto;
-}
-
-/* Card styles */
-.card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: calc(25% - 20px); /* Adjust the width to fit 4 cards per row */
-  height: 120px;
-  margin: 10px;
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
-}
 
 /* Card title styles */
 .card-title {
@@ -218,3 +172,45 @@ body {
   height: auto;
 }
 
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  size: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #31a43f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.card-body {
+  display: none;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content  {display: block;}
+.dropdown:hover .card-body {display: block;}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41; }
