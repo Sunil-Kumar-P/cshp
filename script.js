@@ -23,10 +23,10 @@ var count;
   } else {
     // If it doesn't exist, set the count to 1
     localStorage.setItem('userCount', 1);
-  }aax
+  }
     // Check if the 'userCount' key exists in local storage
    
-   document.getElementById("user-count").innerHTML = "Visitor count is "+ count+" times";
+   document.getElementById("user-count").innerHTML = "Visitor count is "+ count+".";
 
   // // Call the function to increment and display the user count
   // incrementUserCount();

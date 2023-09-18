@@ -203,7 +203,7 @@ body {
   text-decoration: none;
   display: block;
 }
-.card-body {
+.disapper {
   display: none;
 }
 /* Change color of dropdown links on hover */
@@ -211,6 +211,6 @@ body {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content  {display: block;}
-.dropdown:hover .card-body {display: block;}
+.dropdown:hover .disapper {display: block;}
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41; }
