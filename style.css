@@ -177,7 +177,7 @@ body {
   background-color: #04AA6D;
   color: white;
   border: none;
-  size: 10px;
+  size-adjust: auto;
 }
 
 /* The container <div> - needed to position the dropdown content */

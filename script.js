@@ -13,7 +13,9 @@ document.addEventListener("mouseover", e => {
     dropdown.classList.remove("active")
   })
 })
-
+function goBack() {
+  window.history.back();
+}
 var count;
   // Function to increment and display the user count
   if (localStorage.getItem('userCount')) {
