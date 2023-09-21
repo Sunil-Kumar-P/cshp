@@ -129,6 +129,16 @@ body {
   margin-top: 5%;
 }
 
+@media only screen and (max-width:600px) {
+  .extragap {
+    margin-top: 20%;
+  }
+}
+
+.abc {
+  font-size: 150%;
+  color: white;
+}
 .dropdown-links {
   display: flex;
   flex-direction: column;
@@ -214,3 +224,4 @@ body {
 .dropdown:hover .disapper {display: block;}
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41; }
+
